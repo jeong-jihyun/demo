@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RestController
 public class HelloController {
   @GetMapping("/hello")
-  public String getMethodName(@RequestParam(required = false) String param) {
+  public String getMethodName(@RequestParam(defaultValue = "World") String param) {
       return "Hello \"" + param + "\" Spring!";
   }
   
